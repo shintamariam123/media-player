@@ -1,6 +1,7 @@
 const jsonServer = require('json-server')
 const MPServer = jsonServer.create()
-const middleware = jsonServer.router('db.json')
+const middleware = jsonServer.defaults()
+const router = jsonServer.router('db.json')
 const PORT= 3000 || process.env.PORT
 
 MPServer.use(middleware)
